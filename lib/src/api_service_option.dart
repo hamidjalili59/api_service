@@ -11,17 +11,20 @@ class ApiServiceOption {
     this.onReceivePercentage,
     this.header = const ApiServiceHeader.basic(),
     this.responseType = const ApiServiceResponseType.json(),
+    this.timeout = const Duration(seconds: 1),
   });
 
   final ApiServiceHeader header;
   final Map<String, dynamic>? query;
   final OnPercentage? onReceivePercentage;
   final ApiServiceResponseType responseType;
+  final Duration timeout;
 }
 
 extension ApiServiceOptionEx on ApiServiceOption {
   Options get requestOptions => Options(
-    responseType: responseType.toDio,
-    headers: header.toMap,
-  );
+        responseType: responseType.toDio,
+        headers: header.toMap,
+        receiveTimeout: timeout,
+      );
 }
