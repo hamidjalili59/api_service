@@ -4,27 +4,27 @@ import 'package:dio/dio.dart';
 
 abstract class ApiService {
   ///perform a http get request
-  Future<Either<DioError, Response<T>>> getMethod<T>(
+  Future<Either<DioException, Response<T>>> getMethod<T>(
     String endpoint, {
     ApiServiceOption? option,
   });
 
   ///perform a http put request
-  Future<Either<DioError, Response<T>>> putMethod<T>(
+  Future<Either<DioException, Response<T>>> putMethod<T>(
     String endpoint, {
     ApiServiceOption? option,
     dynamic body,
   });
 
   ///perform a http delete request
-  Future<Either<DioError, Response<T>>> deleteMethod<T>(
+  Future<Either<DioException, Response<T>>> deleteMethod<T>(
     String endpoint, {
     ApiServiceOption? option,
     dynamic body,
   });
 
   ///perform a http post request
-  Future<Either<DioError, Response<T>>> postMethod<T>(
+  Future<Either<DioException, Response<T>>> postMethod<T>(
     String endpoint, {
     ApiServiceOption? option,
     dynamic body,
