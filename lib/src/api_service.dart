@@ -1,6 +1,6 @@
 import 'package:api_service/src/api_service_option.dart';
-import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:fpdart/fpdart.dart';
 
 abstract class ApiService {
   ///perform a http get request

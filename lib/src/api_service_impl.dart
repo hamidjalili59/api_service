@@ -1,6 +1,6 @@
 import 'package:api_service/api_service.dart';
-import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:fpdart/fpdart.dart';
 
 class ApiServiceImpl implements ApiService {
   ApiServiceImpl({this.interceptors, required this.dio}) {
