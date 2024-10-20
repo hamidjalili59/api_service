@@ -11,7 +11,7 @@ class ApiServiceOption {
     this.onReceivePercentage,
     this.header = const ApiServiceHeader.basic(),
     this.responseType = const ApiServiceResponseType.json(),
-    this.timeout = const Duration(seconds: 5),
+    this.timeout = const Duration(seconds: 20),
   });
 
   final ApiServiceHeader header;
